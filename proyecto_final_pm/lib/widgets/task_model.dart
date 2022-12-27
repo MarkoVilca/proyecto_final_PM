@@ -1,21 +1,3 @@
-class TaskModel{
-  String usuario;
-  String doc;
-  String pass;
-  
-  TaskModel({
-    required this.usuario,
-    required this.doc,
-    required this.pass,
-  });
-
-  factory TaskModel.fromJson(Map<String, dynamic> json) => TaskModel(
-    usuario: json["usuario"], 
-    doc: json["doc"], 
-    pass: json["pass"],
-    );
-}
-
 class UserModel{
   String Cuenta;
   String Nombre;

@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:proyecto_final_pm/pages/data_page.dart';
-import 'package:proyecto_final_pm/services/user_services.dart';
 import 'package:proyecto_final_pm/widgets/general_widget.dart';
 
 class Login extends StatefulWidget {
@@ -79,7 +78,6 @@ class LoginApp extends State<Login> {
               child: Center(
                 child: ElevatedButton(
                   onPressed: () async{
-                    var Data = await UserServices().getData();
                     validarDatos();
                   },
                   child: Text('INGRESAR'),
