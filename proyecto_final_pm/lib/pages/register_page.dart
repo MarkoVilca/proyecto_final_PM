@@ -18,9 +18,8 @@ class RegisterApp extends State<Register> {
     try{
       await firebase.collection('Users').doc().set({
         "Nombre": usuario.text,
-        "Documento": doc.text,
+        "Cuenta": doc.text,
         "Password": pass.text,
-        "Estado":"En reparacion"
       });
     } catch (e) {
       print('ERROR....'+ e.toString());
@@ -30,7 +29,7 @@ class RegisterApp extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Registro de usuario'),
+        title: Text('Registro de cuenta personal'),
       ),
       body: SingleChildScrollView(
           child: Column(
@@ -51,8 +50,8 @@ class RegisterApp extends State<Register> {
             child: TextField(
               controller: doc,
               decoration: InputDecoration(
-                  labelText: 'Documento Usuario',
-                  hintText: 'Digite Documento de Usuario',
+                  labelText: 'Cuenta',
+                  hintText: 'Digite tipo de cuenta',
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20))),
             ),

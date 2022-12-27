@@ -36,7 +36,7 @@ class HomeStart extends State<Home> {
       ),
       home: Scaffold(
           appBar: AppBar(
-        title: Text('Welcome'),
+        title: Text('Bienvenido a Guarda_info'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -48,7 +48,7 @@ class HomeStart extends State<Home> {
                   print('Boton presionado');
                   Navigator.push(context,MaterialPageRoute(builder: (_)=> Login()));
                 },
-                child: Text('SOLICITUD'),
+                child: Text('VER CUENTAS'),
               ),
             ),
            ),
@@ -59,7 +59,7 @@ class HomeStart extends State<Home> {
                   print('Boton presionado');
                   Navigator.push(context,MaterialPageRoute(builder: (_)=> Register()));
                 },
-                child: Text('REGISTRO'),
+                child: Text('REGISTRAR INFORMACION'),
               ),
             ),
            ),

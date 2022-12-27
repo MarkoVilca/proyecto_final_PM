@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:proyecto_final_pm/pages/data_page.dart';
+import 'package:proyecto_final_pm/services/user_services.dart';
+import 'package:proyecto_final_pm/widgets/general_widget.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -34,7 +36,7 @@ class LoginApp extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Ingrese Solicitud'),
+          title: Text('INICIA SESION'),
         ),
         body: SingleChildScrollView(
           child: Column(children: [
@@ -76,7 +78,8 @@ class LoginApp extends State<Login> {
               padding: EdgeInsets.only(left: 20, top: 50, right: 10),
               child: Center(
                 child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async{
+                    var Data = await UserServices().getData();
                     validarDatos();
                   },
                   child: Text('INGRESAR'),
